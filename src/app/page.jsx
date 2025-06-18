@@ -1,3 +1,12 @@
+'use client'
+import Header from "@/components/Header";
+import Inicio from "@/components/Inicio";
+import SobreMi from "@/components/SobreMi";
+import Proyectos from "@/components/Proyectos";
+import Contacto from "@/components/Contacto";
+import { useEffect, useState } from "react";
+
+
 export default function Home() {
   return (
     <div className="relative bg-slate-900 text-white scroll-smooth overflow-x-hidden">
@@ -10,7 +19,7 @@ export default function Home() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/assets/fondo-video.mp4" type="video/mp4" />
+          <source src="/fondo-video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/60" />
       </div>
