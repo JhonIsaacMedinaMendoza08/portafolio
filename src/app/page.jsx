@@ -4,25 +4,18 @@ import Inicio from "@/components/Inicio";
 import SobreMi from "@/components/SobreMi";
 import Proyectos from "@/components/Proyectos";
 import Contacto from "@/components/Contacto";
-import { useEffect, useState } from "react";
-
+import Skills from '@/components/Skills';
+import SoftSkills from "@/components/SoftSkills";
+import ParticlesBackground from "@/components/ParticlesBackground"; // Importa el fondo de partículas
 
 export default function Home() {
   return (
     <div className="relative bg-slate-900 text-white scroll-smooth overflow-x-hidden">
-      {/* Video de fondo */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/fondo-video.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/60" />
-      </div>
+      {/* Fondo de partículas */}
+      <ParticlesBackground />
+
+      {/* Capa oscura opcional */}
+      <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
 
       {/* Contenido principal */}
       <Header />
@@ -35,6 +28,12 @@ export default function Home() {
         </section>
         <section id="Proyectos">
           <Proyectos />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="soft-skills">
+          <SoftSkills />
         </section>
         <section id="contacto">
           <Contacto />

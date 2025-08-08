@@ -1,57 +1,43 @@
-import React, { useState, useEffect } from "react";
+'use client';
+import React from "react";
+import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+
 
 export default function Inicio() {
-  // Efecto máquina de escribir para los textos
-  const TypewriterName = () => {
-    const texts = [
-      "Jhon Isaac Medina",
-      "Desarrollador Junior Full Stack",
-      "Creador de Experiencias",
-      "Apasionado por la Tecnología",
-    ];
-    const [displayText, setDisplayText] = useState("");
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    const [typingSpeed, setTypingSpeed] = useState(100);
-
-    useEffect(() => {
-      const currentText = texts[currentIndex];
-
-      const handleTyping = () => {
-        if (!isDeleting) {
-          setDisplayText(currentText.substring(0, displayText.length + 1));
-          if (displayText === currentText) {
-            setTimeout(() => setIsDeleting(true), 2000);
-          }
-        } else {
-          setDisplayText(currentText.substring(0, displayText.length - 1));
-          if (displayText === "") {
-            setIsDeleting(false);
-            setCurrentIndex((prev) => (prev + 1) % texts.length);
-            setTypingSpeed(150);
-          }
-        }
-      };
-
-      const timer = setTimeout(
-        handleTyping,
-        isDeleting ? typingSpeed / 2 : typingSpeed
-      );
-      return () => clearTimeout(timer);
-    }, [displayText, currentIndex, isDeleting, typingSpeed]);
-
-    return <span className="text-cyan-400">{displayText}</span>;
-  };
-
   return (
     <section className="font-mono relative min-h-screen overflow-hidden text-white flex flex-col md:flex-row items-center justify-center gap-20 px-8 md:px-36">
-      {/* Texto principal */}
-      <div className="relative z-10 flex-1 space-y-4 text-center md:text-left">
+
+      {/* Bloque de presentación izquierda */}
+      <motion.div
+        className="relative z-10 flex-1 space-y-4 text-center md:text-left"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
         <h1 className="text-[35px] md:text-[65px] lg:text-[66px] font-bold leading-tight">
-          Hola, <br />soy <TypewriterName />
+          Hola, <br />
+          soy{" "}
+          <span className="text-cyan-400">
+            <Typewriter
+              words={["Isaac Medina", "Desarrollador Junior"]}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={80}
+              deleteSpeed={60}
+              delaySpeed={2000}
+            />
+          </span>
         </h1>
 
-        <div className="flex flex-wrap justify-center md:justify-start gap-2">
+
+        <motion.div
+          className="flex flex-wrap justify-center md:justify-start gap-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1 }}
+        >
           <span className="text-sm text-purple-300 bg-purple-600/20 px-3 py-1 rounded-full">
             Tecnología que conecta. Diseño que comunica.
           </span>
@@ -61,15 +47,25 @@ export default function Inicio() {
           <span className="text-sm text-yellow-300 bg-yellow-500/20 px-3 py-1 rounded-full">
             Innovación
           </span>
-        </div>
+        </motion.div>
 
-        <p className="text-base md:text-lg text-gray-300 max-w-xl">
-          Apasionado por la tecnología, el diseño y la creación de experiencias
-          digitales. Transformo ideas en interfaces funcionales con lógica y
-          estética. Siempre aprendiendo, siempre creando.
-        </p>
+        <motion.p
+          className="text-base md:text-lg text-gray-300 max-w-xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.4 }}
+        >
+          Desarrollo interfaces que transmiten, funcionan y cautivan. 
+          Cada línea de código y cada decisión de diseño están pensadas 
+          para crear experiencias memorables y funcionales.
+        </motion.p>
 
-        <div className="flex flex-wrap justify-center md:justify-start gap-5 pt-4">
+        <motion.div
+          className="flex flex-wrap justify-center md:justify-start gap-5 pt-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
+        >
           <a
             href="https://github.com/JhonIsaacMedinaMendoza08"
             target="_blank"
@@ -89,26 +85,29 @@ export default function Inicio() {
           <button className="bg-white text-cyan-700 hover:bg-purple-300 px-5 py-2 rounded-full font-semibold shadow transition">
             Obtener CV
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      {/* "Archivo" de perfil tipo desarrollador.js */}
-      <div className="relative z-10 flex-1 w-full max-w-3xl bg-[#0f172a] border-2 border-cyan-500 rounded-xl shadow-xl text-sm font-mono overflow-x-auto">
-        {/* Cabecera tipo consola de Mac */}
-        <div className="flex items-center px-4 py-2 bg-[#1e293b]  rounded-t-xl">
+      {/* Consola tipo archivo js con animación */}
+      <motion.div
+        className="relative z-10 flex-1 w-full max-w-3xl bg-[#0f172a] border-2 border-cyan-500 rounded-xl shadow-xl text-sm font-mono overflow-x-auto"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 2 }}
+      >
+        <div className="flex items-center px-4 py-2 bg-[#1e293b] rounded-t-xl">
           <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
           <span className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
           <span className="w-3 h-3 bg-green-500 rounded-full"></span>
           <span className="ml-4 text-cyan-300 text-xs">hola.js</span>
         </div>
 
-        {/* Código coloreado como JS */}
         <pre className="p-7 text-[15px] md:text-[16px] lg:text-[17px] text-green-400 whitespace-pre-wrap break-words leading-relaxed">
           <code>
             <span className="text-purple-400">const</span> profile = {"{\n"}
             {"  "}
             <span className="text-yellow-400">name</span>:{" "}
-            <span className="text-pink-400">"Jhon Isaac Medina Mendoza"</span>,
+            <span className="text-pink-400">"Isaac Medina M."</span>,
             {"\n"}
             {"  "}
             <span className="text-yellow-400">title</span>:{" "}
@@ -121,16 +120,7 @@ export default function Inicio() {
             <span className="text-pink-400">"Español (Nativo)"</span>,{" "}
             <span className="text-pink-400">"Inglés (Intermedio)"</span>],{"\n"}
             {"  "}
-            <span className="text-yellow-400">skills</span>: [
-            <span className="text-pink-400">"HTML"</span>,{" "}
-            <span className="text-pink-400">"CSS"</span>,{" "}
-            <span className="text-pink-400">"JavaScript"</span>,{" "}
-            <span className="text-pink-400">"Git"</span>,{" "}
-            <span className="text-pink-400">"React"</span>,{" "}
-            <span className="text-pink-400">"Tailwind"</span>,{" "}
-            <span className="text-pink-400">"Node.js"</span>,{" "}
-            <span className="text-pink-400">"MongoDB"</span>],{"\n"}
-            {"  "}
+            
             <span className="text-yellow-400">education</span>: [
             <span className="text-pink-400">"Técnico en Sistemas - SENA"</span>,{" "}
             <span className="text-pink-400">
@@ -152,13 +142,9 @@ export default function Inicio() {
             <span className="text-pink-400">"Dungeons & Dragons"</span>],{"\n"}
             {"  "}
             <span className="text-yellow-400">experience</span>:{" "}
-            <span className="text-blue-400">2</span>,{"\n"}
+            <span className="text-blue-400">1</span>,{"\n"}
             {"  "}
-            <span className="text-yellow-400">softSkills</span>: [
-            <span className="text-pink-400">"Trabajo en equipo"</span>,{" "}
-            <span className="text-pink-400">"Comunicación"</span>,{" "}
-            <span className="text-pink-400">"Autonomía"</span>],{"\n"}
-            {"  "}
+            
             <span className="text-yellow-400">hardWorker</span>:{" "}
             <span className="text-blue-400">true</span>,{"\n"}
             {"  "}
@@ -173,7 +159,7 @@ export default function Inicio() {
             {"}"};{"\n"}
           </code>
         </pre>
-      </div>
+      </motion.div>
     </section>
   );
 }
