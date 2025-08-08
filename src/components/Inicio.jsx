@@ -6,7 +6,13 @@ import { motion } from "framer-motion";
 
 export default function Inicio() {
   return (
-    <section className="font-mono relative min-h-screen overflow-hidden text-white flex flex-col md:flex-row items-center justify-center gap-20 px-8 md:px-36">
+    <section className="
+    font-mono relative min-h-screen overflow-hidden text-white
+    flex flex-col md:flex-row items-center md:items-center
+    justify-start md:justify-center
+    gap-20 px-8 md:px-36
+    pt-24 sm:pt-28 md:pt-0
+  ">
 
       {/* Bloque de presentación izquierda */}
       <motion.div

@@ -20,7 +20,7 @@ export default function Home() {
       {/* Contenido principal */}
       <Header />
       <main className="relative z-10 pt-0 px-4 md:px-12 lg:px-0">
-        <section id="inicio">
+        <section id="inicio" className="scroll-mt-28 md:scroll-mt-20">
           <Inicio />
         </section>
         <section id="sobremi">

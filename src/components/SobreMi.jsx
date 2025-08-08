@@ -101,7 +101,7 @@ export default function SobreMi() {
         >
           <h3 className="text-2xl font-bold text-indigo-300 mb-4">Mi visión</h3>
           <p className="text-sm text-gray-200 leading-relaxed text-justify">
-            Consolidarme como desarrollador backend líder, generando impacto a
+            Consolidarme como desarrollador líder, generando impacto a
             través de proyectos innovadores, eficientes y colaborativos. Aspiro a
             contribuir con soluciones que transformen digitalmente equipos y
             comunidades.
