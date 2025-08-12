@@ -27,7 +27,7 @@ export default function Inicio() {
           soy{" "}
           <span className="text-cyan-400">
             <Typewriter
-              words={["Isaac Medina", "Desarrollador Junior"]}
+              words={["Isaac Medina", "Desarrollador Junior Full Stack"]}
               loop={0}
               cursor
               cursorStyle="_"
@@ -82,7 +82,7 @@ export default function Inicio() {
             <img src="/gitHub-logo.png" alt="GitHub" />
           </a>
           <a
-            href="https://www.linkedin.com/in/jhon-isaac-medina-mendoza-3669a5322/"
+            href="http://www.linkedin.com/in/isaac-medina-3669a5322"
             target="_blank"
             rel="noreferrer"
             className="bg-white hover:bg-purple-300 px-2 py-2 rounded-full shadow w-10 h-10 flex items-center justify-center"

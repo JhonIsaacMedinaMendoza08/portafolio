@@ -22,7 +22,7 @@ const proyectos = [
       "https://motorcycle-explorer-api-js.vercel.app/",
   },
   {
-    titulo: "Gestor de portafoloiio de proyectos",
+    titulo: "Gestor de portafolio de proyectos",
     descripcion: "📚 Aplicación CLI desarrollada en Node.js para freelancers que permite gestionar clientes, propuestas, proyectos, contratos, entregables y finanzas de forma estructurada, automatizada y profesional.",
     imagen: "/gestorImage.png",
     enlace: "https://github.com/JhonIsaacMedinaMendoza08/gestor-de-portafolio-de-proyectos",

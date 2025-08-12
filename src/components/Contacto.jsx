@@ -99,7 +99,7 @@ export default function Contacto() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/jhon-isaac-medina-mendoza-3669a5322/"
+              href="http://www.linkedin.com/in/isaac-medina-3669a5322"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-white/5 border border-white/10 hover:bg-white/10"
