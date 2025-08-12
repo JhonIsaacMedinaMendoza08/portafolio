@@ -25,15 +25,15 @@ export default function SobreMi() {
         viewport={{ once: true }}
       >
         <img
-          src="/foto-perfil.jpg"
+          src="/foto-Isaac.jpeg"
           alt="Foto de Jhon Mendoza"
-          className="w-40 h-40 rounded-full object-cover shadow-md border-4 border-indigo-400"
+          className="w-100 h-120 rounded-full object-cover shadow-md border-4 border-indigo-400"
         />
 
         <div className="max-w-xl space-y-4 text-justify md:text-left">
           <p>
             ¡Hola! Soy{" "}
-            <span className="font-semibold">Jhon Isaac Medina Mendoza</span>,
+            <span className="font-semibold">Isaac Medina M</span>,
             desarrollador web apasionado por crear experiencias digitales con
             impacto. Mi formación combina la ingeniería con el desarrollo de
             software, sumando experiencia técnica y enfoque práctico.

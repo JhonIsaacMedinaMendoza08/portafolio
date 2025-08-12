@@ -18,10 +18,10 @@ export default function ParticlesBackground() {
                 background: { color: { value: "#0f172a" } },
                 particles: {
                     number: {
-                        value: 160, // ⬆️ antes era 80
-                        density: { enable: true, area: 600 } // ⬇️ antes era 800
+                        value: 200, // ⬆️ antes era 80
+                        density: { enable: true, area: 700 } // ⬇️ antes era 800
                     },
-                    color: { value: "#ffffff" },
+                    color: { value: "#26C6DA" },
                     links: {
                         enable: true,
                         color: "#ffffff",
@@ -51,7 +51,7 @@ export default function ParticlesBackground() {
                         onClick: { enable: true, mode: "push" }
                     },
                     modes: {
-                        repulse: { distance: 100 },
+                        repulse: { distance: 80 },
                         push: { quantity: 4 }
                     }
                 },

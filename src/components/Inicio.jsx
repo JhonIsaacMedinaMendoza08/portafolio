@@ -13,7 +13,7 @@ export default function Inicio() {
     gap-20 px-8 md:px-36
     pt-24 sm:pt-28 md:pt-0
   "
-  >
+    >
 
       {/* Bloque de presentación izquierda */}
       <motion.div
@@ -62,8 +62,8 @@ export default function Inicio() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
         >
-          Desarrollo interfaces que transmiten, funcionan y cautivan. 
-          Cada línea de código y cada decisión de diseño están pensadas 
+          Desarrollo interfaces que transmiten, funcionan y cautivan.
+          Cada línea de código y cada decisión de diseño están pensadas
           para crear experiencias memorables y funcionales.
         </motion.p>
 
@@ -89,9 +89,15 @@ export default function Inicio() {
           >
             <img src="/linkedin-logo.png" alt="LinkedIn" />
           </a>
-          <button className="bg-white text-cyan-700 hover:bg-purple-300 px-5 py-2 rounded-full font-semibold shadow transition">
-            Obtener CV
-          </button>
+          <a
+            href="https://1drv.ms/b/c/f0c2a3002ca76ea7/EbX5yjN2ubpOkEkXv9Exj8sBhL7Nl_CVfT3wX3Y3yNKZKQ?e=eosfMo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="bg-white text-cyan-700 hover:bg-purple-300 px-5 py-2 rounded-full font-semibold shadow transition">
+              Obtener CV
+            </button>
+          </a>
         </motion.div>
       </motion.div>
 
@@ -127,7 +133,7 @@ export default function Inicio() {
             <span className="text-pink-400">"Español (Nativo)"</span>,{" "}
             <span className="text-pink-400">"Inglés (Intermedio)"</span>],{"\n"}
             {"  "}
-            
+
             <span className="text-yellow-400">education</span>: [
             <span className="text-pink-400">"Técnico en Sistemas - SENA"</span>,{" "}
             <span className="text-pink-400">
@@ -148,10 +154,7 @@ export default function Inicio() {
             <span className="text-pink-400">"API de Motocicletas"</span>,{" "}
             <span className="text-pink-400">"Dungeons & Dragons"</span>],{"\n"}
             {"  "}
-            <span className="text-yellow-400">experience</span>:{" "}
-            <span className="text-blue-400">1</span>,{"\n"}
-            {"  "}
-            
+
             <span className="text-yellow-400">hardWorker</span>:{" "}
             <span className="text-blue-400">true</span>,{"\n"}
             {"  "}
