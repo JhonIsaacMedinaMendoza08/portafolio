@@ -12,7 +12,8 @@ export default function Inicio() {
     justify-start md:justify-center
     gap-20 px-8 md:px-36
     pt-24 sm:pt-28 md:pt-0
-  ">
+  "
+  >
 
       {/* Bloque de presentación izquierda */}
       <motion.div
